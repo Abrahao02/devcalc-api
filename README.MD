@@ -1,5 +1,16 @@
 # DevCalc API
 
+![CI](https://github.com/Abrahao02/devcalc-api/actions/workflows/ci.yml/badge.svg)
+
+## 🚀 Execução Manual
+
+O pipeline pode ser executado manualmente via aba "Actions" do GitHub, através do botão `Run workflow`. Isso permite selecionar parâmetros personalizados (como executar ou não testes/linting) e simular cenários reais de CI/CD.
+
+## 🧪 Experimento de Falha no Pipeline
+
+Durante o desenvolvimento do pipeline, foi propositalmente inserido um erro de execução (`exit 1`) para verificar a detecção de falhas. O erro foi identificado na aba de *Actions* no GitHub, onde os logs mostraram exatamente onde a falha ocorreu. Após isso, o erro foi corrigido e uma nova execução foi feita com sucesso.
+
+
 DevCalc é uma API REST escrita em Java que oferece operações matemáticas simples (adição, subtração, multiplicação e divisão). O projeto tem como objetivo servir de base para a construção de um pipeline de CI/CD utilizando **GitHub Actions**.
 
 ## 📌 Objetivo
