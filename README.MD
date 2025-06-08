@@ -55,3 +55,16 @@ devcalc-api/
 │   └── (prints do terminal e execuções dos workflows)
 ├── pom.xml
 └── README.md
+
+## TP3 - Integração, Segurança e Ambientes
+
+Este trabalho foca no aprofundamento do pipeline CI/CD da aplicação DevCalc. As principais etapas foram:
+
+1. **Runner auto-hospedado**: Configuração de um runner local para execução personalizada.
+2. **Variáveis e Segredos**: Uso de `vars` e `secrets` no workflow para comportamentos dinâmicos.
+3. **Contextos e Escopos**: Demonstração de variáveis em nível de workflow, job e step.
+4. **Controle de Permissões**: Uso do `GITHUB_TOKEN` para criação automatizada de issues.
+5. **Ambientes de Deploy**: Separação dos ambientes `dev` (automático) e `prod` (com aprovação).
+
+Para reproduzir os workflows, consulte os arquivos em `.github/workflows/`.
+

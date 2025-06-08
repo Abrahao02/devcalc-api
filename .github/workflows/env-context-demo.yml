@@ -1,0 +1,22 @@
+name: Contextos e Escopos
+
+on: [workflow_dispatch]
+
+env:
+  STAGE: global
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    env:
+      STAGE: job
+    steps:
+      - name: Print do contexto
+        run: |
+          echo "Usuário: ${{ github.actor }}"
+          echo "Sistema: ${{ runner.os }}"
+          echo "STAGE (job): $STAGE"
+      - name: Escopo local
+        env:
+          STAGE: step
+        run: echo "STAGE (step): $STAGE"

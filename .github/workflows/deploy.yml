@@ -1,0 +1,24 @@
+name: Deploy Automático
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - run: echo "Deploy para DEV - DEBUG=${{ vars.DEBUG }}"
+
+  deploy-prod:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+      url: https://devcalc.com/prod
+    steps:
+      - run: echo "Deploy para PROD - Token=${{ secrets.PROD_TOKEN }}"
